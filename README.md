@@ -1,2 +1,2 @@
-### Animated Owl
-#Animated owl using HTML, CSS and JavaScript
+# Animated Owl
+## Animated owl using HTML, CSS and JavaScript
