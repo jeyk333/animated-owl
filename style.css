@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#sky {
+  overflow: hidden;
+  background-color: #fff;
+  height: 100vh;
+  position: relative;
+}
+#sky .star {
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-animation: blinkAnim 5s infinite;
+  animation: blinkAnim 5s infinite;
+}
+#sky .square {
+  z-index: 1000;
+  width: 400px;
+  height: 484px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 4px;
+  margin: auto;
+}
+#sky .square .owl {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  width: 50%;
+  height: 95%;
+  background-color: #0e86d4;
+}
+#sky .square .owl:before {
+  background-color: #fff;
+  position: absolute;
+  top: -125px;
+  left: -25px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: block;
+  content: '';
+}
+#sky .square .owl .eyes {
+  position: absolute;
+  width: 100%;
+  top: 140px;
+  border-radius: 50%;
+  background-color: #055c9d;
+  width: 110px;
+  height: 110px;
+  transition: all 0.03s ease-in-out;
+  overflow: hidden;
+}
+#sky .square .owl .eyes:before {
+  content: '';
+  position: absolute;
+  width: 110%;
+  height: 100%;
+  top: 10px;
+  left: -5px;
+  border-radius: 50%;
+  display: block;
+  background-color: white;
+  z-index: 0;
+  transition: all 0.03s ease-in-out;
+}
+#sky .square .owl .eyes.closed:before {
+  height: 10%;
+  top: 55px;
+  transition: all 0.5s ease-in-out;
+}
+#sky .square .owl .eyes .retina {
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  top: 40px;
+  left: 40px;
+  z-index: 10;
+  background-color: #055c9d;
+  transition: all 0.2s linear;
+}
+#sky .square .owl .eyes.left {
+  left: -5px;
+}
+#sky .square .owl .eyes.right {
+  right: -10px;
+}
+#sky .square .owl .nose {
+  position: absolute;
+  top: 225px;
+  left: 80px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 25px solid #ead60e;
+}
+#sky .square .owl .wing {
+  height: 100px;
+  width: 220px;
+  position: absolute;
+  top: 325px;
+  background-color: #055c9d;
+}
+#sky .square .owl .wing.right {
+  border-radius: 0px 50px;
+  transform: rotate(80deg);
+  right: -90px;
+}
+#sky .square .owl .wing.left {
+  border-radius: 50px 0px;
+  transform: rotate(100deg);
+  left: -90px;
+}
+.grass {
+  background-color: lightgreen;
+  height: calc(100vh - 50%);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+@-webkit-keyframes blinkAnim {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes blinkAnim {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
